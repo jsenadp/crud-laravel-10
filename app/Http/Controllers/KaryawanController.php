@@ -25,7 +25,7 @@ class KaryawanController extends Controller
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
-        return redirect()->route('karyawan')->with('success', 'Data berhasil ditambahkan');
+        return redirect()->route('karyawan')->with('succes', 'Data berhasil ditambahkan');
     }
 
     public function tampildata($id){
@@ -37,13 +37,13 @@ class KaryawanController extends Controller
     public function updatedata(Request $request, $id){
         $data = Karyawan::find($id);
         $data->update($request->all());
-        return redirect()->route('karyawan')->with('success', 'Data berhasil di Update');
+        return redirect()->route('karyawan')->with('succes', 'Data berhasil di Update');
     }
 
     public function delete($id){
         $data = Karyawan::find($id);
         $data->delete();
-        return redirect()->route('karyawan')->with('success', 'Data berhasil di Delete');
+        return redirect()->route('karyawan')->with('succes', 'Data berhasil di Delete');
     }
 }
 

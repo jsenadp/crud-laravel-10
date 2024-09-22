@@ -27,4 +27,3 @@ Route::get('/tampildata/{id}', [KaryawanController::class, 'tampildata'])->name(
 Route::post('/updatedata/{id}', [KaryawanController::class, 'updatedata'])->name('updatedata');
 
 Route::get('/delete/{id}', [KaryawanController::class, 'delete'])->name('delete');
-
